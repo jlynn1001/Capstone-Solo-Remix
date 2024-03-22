@@ -9,34 +9,29 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
 public class User {
     @Id
     @GeneratedValue
-    @Getter
-    @Setter
     @Column(name="user_id")
     Integer userId;
-    @Getter
-    @Setter
+
     @Column(name="username")
     private String username;
-    @Getter
-    @Setter
+
     @Column(name="first_name")
     private String firstName;
-    @Getter
-    @Setter
+
     @Column(name="last_name")
     private String lastName;
-    @Getter
-    @Setter
+
     @Column(name="password")
     private String password;
-    @Getter
-    @Setter
+
     @Column(name="email")
     private String email;
 

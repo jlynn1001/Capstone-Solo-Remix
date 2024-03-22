@@ -10,20 +10,17 @@ import lombok.Setter;
 import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 public class TripDTO {
-    @Getter
-    @Setter
+
     private Integer tripId;
-    @Getter
-    @Setter
+
     private String tripLocation;
-    @Getter
-    @Setter
+
     private List<User> travelers;
-    @Getter
-    @Setter
+
     private List<Activity> selectedActivities;
-    @Getter
-    @Setter
+
     private List<Activity> likedActivities;
 }

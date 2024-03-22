@@ -8,17 +8,17 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
+@Setter
 @Entity
 public class Trip {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Getter
-    @Setter
+
     @Column(name = "trip_id")
     private Integer tripId;
 
-    @Getter
-    @Setter
+
     @Column(name = "trip_location")
     private String tripLocation;
 
@@ -29,8 +29,7 @@ public class Trip {
             joinColumns = @JoinColumn(name = "trip_id"),
             inverseJoinColumns = @JoinColumn(name = "user_id")
     )
-    @Getter
-    @Setter
+
     private List<User> travelers;
 
 
@@ -40,8 +39,7 @@ public class Trip {
             joinColumns = @JoinColumn(name = "trip_id"),
             inverseJoinColumns = @JoinColumn(name = "activity_id")
     )
-    @Getter
-    @Setter
+
     private List<Activity> selectedActivities;
 
     @ManyToMany
@@ -50,7 +48,6 @@ public class Trip {
             joinColumns = @JoinColumn(name = "trip_id"),
             inverseJoinColumns = @JoinColumn(name = "activity_id")
     )
-    @Getter
-    @Setter
+
     private List<Activity> likedActivities;
 }

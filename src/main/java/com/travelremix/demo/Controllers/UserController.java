@@ -1,5 +1,12 @@
 package com.travelremix.demo.Controllers;
 
+import com.travelremix.demo.Services.UserService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+@Controller
 public class UserController {
+    @Autowired
+    private UserService userService;
 
 }
